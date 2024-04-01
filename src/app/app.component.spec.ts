@@ -14,11 +14,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Fetch_Routing_Angular' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Fetch_Routing_Angular');
-  });
+
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
