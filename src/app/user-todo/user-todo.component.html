@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h1>Todo List</h1>
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{ userTodo.title }}</h5>
+          <button
+            class="btn btn-sm"
+            [ngClass]="{
+              'btn-success': userTodo.completed,
+              'btn-danger': !userTodo.completed
+            }"
+          >
+            {{ userTodo.completed ? 'Completed' : 'Not Completed' }}
+          </button>
+        </div>
+        <p class="mb-1">ID: {{ userTodo.id }}</p>
+        <small>User ID: {{ userTodo.userId }}</small>
+      </a>
+    </div>
+  </div>
+  

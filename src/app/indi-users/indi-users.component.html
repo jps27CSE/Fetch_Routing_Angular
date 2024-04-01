@@ -8,6 +8,8 @@
         <p class="card-text">Website: {{ user.website }}</p>
         <p class="card-text">Address: {{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}</p>
         <p class="card-text">Company: {{ user.company.name }} - {{ user.company.catchPhrase }}</p>
+        <a [routerLink]="['/user','todo',user.id]"  >Show Todos</a>
       </div>
+     
     </div>
   </div>

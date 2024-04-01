@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { UsersService } from '../users.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-indi-users',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './indi-users.component.html',
   styleUrl: './indi-users.component.css'
 })
