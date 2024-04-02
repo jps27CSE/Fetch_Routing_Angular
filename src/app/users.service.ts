@@ -26,4 +26,9 @@ export class UsersService {
     return this.http.delete<any>(url)
   }
 
+  updateUser(userId:number,userData:any){
+    const url =`${this.User_API_URL}/${userId}`
+    return this.http.put<any>(url,userData) 
+  }
+
 }

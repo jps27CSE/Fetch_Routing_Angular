@@ -10,6 +10,7 @@
         <p class="card-text">Company: {{ user.company.name }} - {{ user.company.catchPhrase }}</p>
         <a [routerLink]="['/user','todo',user?.id]"  >Show Todos</a>
         <button (click)="deleteUser()" type="button" class="btn btn-danger m-lg-2">Delete</button>
+        <button [routerLink]="['/user', 'edit', user?.id]" class="btn btn-primary m-lg-2">Edit</button>
       </div>
     </div>
   </div>
