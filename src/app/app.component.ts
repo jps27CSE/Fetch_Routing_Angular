@@ -14,17 +14,14 @@ import { BackNavigationService } from './back-navigation.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  logged = true
   constructor(private backwardNavigationConfirmation: BackNavigationService) {}
 
   @HostListener('window:popstate', ['$event'])
   onPopState(event: Event) {
     const confirmed = this.backwardNavigationConfirmation.confirmBackNavigation();
-    if (!confirmed && this.logged) {
+    if (!confirmed) {
       history.forward();
-      this.logged = false
       event.preventDefault()
-
     }
   }
 }
